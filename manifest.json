@@ -1,0 +1,23 @@
+{
+  "name": "AI hverdag",
+  "short_name": "AIhverdag",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#00ffc8",
+  "orientation": "portrait",
+  "lang": "no",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
+

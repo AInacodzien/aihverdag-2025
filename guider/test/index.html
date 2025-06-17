@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[Beskrivelse av siden]">
+  <meta name="keywords" content="ai, kunstig intelligens, norge, hverdag, verktøy">
+  <meta name="author" content="AIhverdag.no">
+  <title>[Tittel her – maks 60 tegn]</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[Tittel for deling]">
+  <meta property="og:description" content="[Kort beskrivelse]">
+  <meta property="og:image" content="https://aihverdag.no/assets/aihverdag-logo.webp">
+  <meta property="og:url" content="https://aihverdag.no">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[Tittel for Twitter]">
+  <meta name="twitter:description" content="[Twitter beskrivelse]">
+  <meta name="twitter:image" content="https://aihverdag.no/assets/aihverdag-logo.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#00ffc8">
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav aria-label="Hovedmeny">
+    <button class="burger" aria-label="Mobilmeny">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links">
+      <ul>
+        <li><a href="/">Hjem</a></li>
+        <li><a href="/ai/">AI</a></li>
+        <li><a href="/#eksempler">Eksempler</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="standard-header">
+    <h1>[Tittel på artikkel eller side]</h1>
+    <p>[Valgfri ingress eller introtekst]</p>
+  </header>
+
+  <main class="container">
+    <article class="full-article">
+      <!-- DIN INNHOLD HER -->
+      <p>Her kommer hovedinnholdet på siden.</p>
+    </article>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="/">Hjem</a>
+      <a href="/ai/">AI</a>
+      <a href="/#eksempler">Eksempler</a>
+      <a href="/kontakt/">Kontakt</a>
+    </nav>
+    <img src="/images/aihverdag-logo.webp" alt="Kunstig intelligens hverdag logo" class="footer-logo">
+    <p>&copy; 2025 Ai hverdag – Alle rettigheter forbeholdt.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const links = document.querySelectorAll('.nav-links a');
+      if (burger && navLinks) {
+        burger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+        links.forEach(link => link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        }));
+      }
+    });
+  </script>
+</body>
+</html>
+

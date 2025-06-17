@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt oss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    button {
+  background-color: #00ffe0; /* przykład – dopasuj do tego, który Ci się podoba */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00ccb3;
+}
+  </style>
+</head>
+<body>
+  <a id="top"></a> <!-- punkt kotwiczący na górze strony -->
+
+  <section class="container kontakt-seksjon">
+    <h2>Kontakt oss</h2>
+    <p>Har du spørsmål, forslag eller ønsker du å samarbeide med oss? Ta kontakt!</p>
+    <form action="send.php" method="POST" class="contact-form">
+      <input type="text" name="honeypot" id="honeypot" style="display: none;" autocomplete="off">
+      <input type="text" name="name" placeholder="Ditt navn" required>
+      <input type="email" name="email" placeholder="Din e-post" required>
+      <textarea name="message" rows="5" placeholder="Din melding..." required></textarea>
+      <button type="submit" class="cta-button">Send melding</button>
+    </form>
+    <a href="../" class="cta-button back-to-top">⬅️ Tilbake til forsiden</a>
+
+  </section>
+</body>
+</html>

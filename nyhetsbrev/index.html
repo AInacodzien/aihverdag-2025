@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyhetsbrev – AI hverdag</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+  .cta-button {
+    background-color: #00ffe0;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95rem;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .cta-button:hover {
+    background-color: #00ccb3;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+</style>
+
+
+
+</head>
+<body>
+  <main>
+    <section class="newsletter-form">
+      <h2>Abonner på vårt nyhetsbrev</h2>
+      <p>Få gratis e-bøker, AI-prompter og smarte tips rett i innboksen din – hver uke.</p>
+
+      <form id="signup-form">
+        <input type="email" id="email" placeholder="Din e-post" required>
+        <!-- Honeypot – ukryte pole -->
+        <input type="text" name="honeypot" id="honeypot" style="display: none;" autocomplete="off">
+        <button type="submit" class="cta-button">Meld meg på</button>
+      </form>
+
+      <div id="msg"></div>
+
+      <!-- Przycisk powrotu na stronę główną -->
+      <a href="../" class="cta-button back-to-top">⬅️ Tilbake til forsiden</a>
+
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const honeypot = document.getElementById('honeypot').value;
+      if (honeypot) {
+        console.log('Bot detected, aborting...');
+        return;
+      }
+      document.getElementById('msg').textContent = 'Wysyłam…';
+      try {
+        const res = await fetch('subscribe.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        if (res.ok) {
+    window.location.href = '/nyhetsbrev-takk/';
+}
+ else {
+          throw new Error(await res.text());
+        }
+      } catch (err) {
+        document.getElementById('msg').textContent = 'Coś poszło nie tak.';
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI i hverdagen – forståelig og nyttig blogg</title>
+  <meta name="description" content="En blogg om hvordan du kan bruke kunstig intelligens hverdag – enkelt forklart, med praktiske eksempler og verktøy.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI hverdag – forståelig og nyttig blogg">
+  <meta property="og:description" content="Oppdag hvordan du kan bruke kunstig intelligens i det daglige. Enkelt forklart, steg for steg.">
+  <meta property="og:image" content="https://aihverdag.no/assets/Logo.png">
+  <meta property="og:url" content="https://aihverdag.no">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI hverdag – forståelig og nyttig blogg">
+  <meta name="twitter:description" content="Praktiske eksempler og verktøy for deg som vil forstå og bruke kunstig intelligens hverdag.">
+  <meta name="twitter:image" content="https://aihverdag.no/assets/Logo.png">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Theme for mobile browser (Android, Windows) -->
+<meta name="theme-color" content="#00ffc8">
+
+  <!-- Fonts + Styles -->
+ <!-- Fonts + Styles -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav aria-label="Hovedmeny">
+  <button class="burger" aria-label="Mobilmeny">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="nav-links">
+    <ul>
+      <li><a href="/">Hjem</a></li>
+      <li><a href="/ai/">AI</a></li>
+      <li><a href="/#eksempler">Eksempler</a></li>
+      <li><a href="/kontakt/">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+  </nav>
+
+  <header class="blog-header">
+    <h1>BLOG: AI</h1>
+  </header>
+  
+  <main class="container">
+    <article class="box">
+      <img src="salon1.png" alt="Koselig nordisk stue med stort vindu">
+      <div class="box-content">
+        <h3>Hva er kunstig intelligens? <span style="font-size: 0.85rem; font-weight: normal;">– 23. mars 2025</span></h3>
+        <p>Kunstig intelligens (AI) er teknologi som kan lære, forstå og hjelpe oss i dagliglivet. Du møter AI i mobilen, på nett, i bilen og hjemme – oftest uten å tenke over det.</p>
+        <p>Fra Netflix-anbefalinger til stemmestyring og smartere strømbruk – AI er allerede en del av hverdagen din.</p>
+        <a href="blogA1.html">Les mer</a>
+      </div>
+    </article>
+  </main>
+  
+  <footer>
+    <nav>
+  <a href="/#hjem">Hjem</a>
+  <a href="/ai/">AI</a>
+  <a href="/#eksempler">Eksempler</a>
+  <a href="/#kontakt">Kontakt</a>
+</nav>
+
+    <div class="social-icons">
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <img src="/images/aihverdag-logo.webp" alt="Kunstig intelligens i hverdagen logo" class="footer-logo">
+    <p>&copy; 2025 Kunstig intelligens hverdag – Alle rettigheter reservert.</p>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const links = document.querySelectorAll('.nav-links a');
+      if(burger && navLinks) {
+        burger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+        links.forEach(link => link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        }));
+      }
+    });
+  </script>
+</body>
+</html>

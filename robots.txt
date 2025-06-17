@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aihverdag.no/sitemap.xml

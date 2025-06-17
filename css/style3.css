@@ -1,0 +1,1222 @@
+/* ===== style.css start ===== */
+
+/* === GLOBAL / RESET === */
+/* Globalne style, zmienne i reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #0d1117;
+  --text-color: #e6edf3;
+  --accent-color: #00ffcc;
+  --box-bg: #161b22;
+  --border-color: #00ffcc;
+  --section-bg: #12161d;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color); /* nagłówki turkusowe */
+}
+
+
+/* === NAVIGATION === */
+/* Nawigacja – wspólna część (scalone z style5,6,7,8) */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: rgba(13,17,23,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,204,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+}
+.nav-links a {
+  font-size: 1.05rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  transition: opacity 0.3s;
+  line-height: 1.2;
+  display: block;
+}
+.nav-links a:hover { 
+  opacity: 0.8;
+}
+/* Poprawka dla listy nawigacyjnej */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* 🔧 MOBILE STYLES */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    z-index: 99;
+    width: auto;
+    gap: 0.4rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    line-height: 1.1;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    max-height: 300px;
+  }
+
+  /* 🔁 UL i LI w trybie mobilnym */
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+}
+
+
+/* === HEADER BASE === */
+/* Sekcja Header – dotąd różne pliki definiowały tło, padding itp. 
+   (Późniejsze pliki nadpiszą te ustawienia) */
+
+
+
+/* === BLOG HEADER CUSTOM === */
+/* Dodatkowe drobne modyfikacje nagłówka z bloga */
+
+
+
+/* === HEADER VARIANT (Shared) === */
+/* Kolejna odmiana headera – wspólna dla niektórych podstron */
+
+
+
+/* === HEADER: AI-VERKTOY BACKGROUND === */
+/* Header: wersja z tłem "ai-verktoy.png" – jeszcze nie ostateczna */
+
+
+
+/* === TIP SECTION === */
+/* Header: wersja z tłem "ai-tips.png" oraz style dla sekcji z tipami */
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.tip-card {
+  background-color: var(--box-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+.tip-card h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+.tip-card i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+.category-section {
+  margin-bottom: 3rem;
+}
+.category-section h2 {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
+/* === NEWSLETTER + FORM SECTIONS === */
+/* Newsletter Section oraz drobne modyfikacje stopki */
+.newsletter-section {
+  background-color: var(--section-bg);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+.newsletter-form {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+/* Dodane style formularzy – newsletter i kontakt */
+.contact-form,
+.newsletter-form {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: var(--box-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+.cta-button {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: filter 0.3s;
+}
+.cta-button:hover {
+  filter: brightness(0.9);
+}
+
+/* Styl pola e-mail w newsletterze */
+.newsletter-email {
+  width: 300px;
+  max-width: 100%;
+}
+
+/* Przywrócenie stylu linków w listach artykułów */
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+.article-item {
+  background-color: var(--box-bg);
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+.article-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.article-item a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* === FINAL OVERRIDES / PAGE-SPECIFIC === */
+/* Ostateczne ustawienia, które mają pierwszeństwo */
+
+/* Globalny header – usuwamy background, aby nie nadpisywał indywidualnych ustawień */
+header {
+  background: none;
+  padding: 8rem 2rem;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Unikalne nagłówki dla poszczególnych stron */
+
+/* 1. Strona główna: index.html */
+/* header.home-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('/images/kvinne-og-humanoid-robot.webp') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 3rem 2rem;
+  min-height: auto;
+} */
+
+/* 2. Blog: blog.html */
+header.blog-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('blog-header.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 3. Artykuł blogowy: blogA1.html */
+header.blogA1-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('mala-grafika.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 4. Podstrona1 – "AI i hjemmet": podstrona1.html */
+header.ai-hjemmet-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('ai-hjemmet.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 5. Podstrona2 – "AI-verktøy": podstrona2.html */
+header.ai-verktoy-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('ai-verktoy.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 6. Podstrona3 – "AI-tips og triks": podstrona3.html */
+header.ai-tips-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('ai-tips.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 7. Podstrona4 – "AI for eldre": podstrona4.html */
+header.ai-eldre-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('ai-eldre.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* 8. AI-verktøyA1: ai-verktoyA1.html */
+header.verktoyA1-header {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('ai-verktoyA1.png') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  min-height: 80vh;
+}
+
+/* Container – final ustawienia */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Ticker – unikalna sekcja */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  padding: 0.5rem 0;
+}
+.ticker__wrap {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 15s linear infinite;
+}
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ZATRZYMANIE */
+.ticker:hover .ticker__wrap {
+  animation-play-state: paused;
+}
+
+/* LINKI w tickerze – jeżeli newsy są generowane jako <a> */
+.ticker__wrap a {
+  display: inline-block;
+  color: #00ffe4 !important;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+.ticker__wrap a:hover {
+  text-decoration: underline;
+  color: #ff5252 !important;
+}
+
+/* DODATKOWA REGUŁA DLA SPAN – jeżeli newsy są generowane jako <span> */
+.ticker__wrap span {
+  display: inline-block;
+  color: #00ffe4 !important;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+
+/* MOBILKI */
+@media (max-width: 768px) {
+  .ticker__wrap a,
+  .ticker__wrap span {
+    font-size: 0.85rem;
+    margin-right: 1rem;
+  }
+}
+
+
+/* Box Container – przykładowe kafelki */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .box-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+.box-container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.box-container a .box {
+  height: 100%;
+}
+.box {
+  min-height: 380px;
+  background-color: var(--box-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 2px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+.box:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+}
+.box:hover h3 {
+  color: var(--accent-color);
+}
+@media (max-width: 768px) {
+  .box:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  .box:active h3 {
+    color: var(--accent-color);
+  }
+}
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Article / Full Article – styl artykułów */
+article.full-article {
+  background-color: var(--box-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 2px solid var(--border-color);
+}
+article.full-article h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+article.full-article p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+article.full-article ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+article.full-article ul li {
+  margin-bottom: 0.5rem;
+}
+.article-meta {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+a.back-link {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Footer – final ustawienia */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1f2937;
+  color: #9ca3af;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+footer nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.social-icons a {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  transition: opacity 0.3s;
+}
+.social-icons a:hover {
+  opacity: 0.8;
+}
+.footer-logo {
+  display: block;
+  margin: 1rem auto 0;
+  max-width: 80px;
+}
+
+
+/* === FIXED TICKER === */
+.ticker-container {
+  background: #000;
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  z-index: 1000;
+}
+
+.ticker {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 1000;
+  position: relative;
+}
+
+.ticker__wrap {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker-scroll 20s linear infinite;
+  z-index: 1000;
+  position: relative;
+}
+
+.ticker-container:hover .ticker__wrap {
+  animation-play-state: paused;
+}
+
+.ticker__wrap a {
+  display: inline-block;
+  margin-right: 60px;
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  z-index: 1001;
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.ticker__wrap a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+/* === ABOUT-BOX – ramka “Hvem er vi?” taka szeroka jak dwa widgety obok siebie === */
+.about-box {
+  /* ograniczamy szerokość do 1100px tak jak w .container */
+  max-width: 1100px;
+  /* wycentrujemy w poziomie i dodamy odstęp od góry/dół */
+  margin: 3rem auto;
+  /* wewnętrzny padding */
+  padding: 2rem;
+  /* ramka i zaokrąglenia jak w widgetach */
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  /* by padding liczył się do szerokości pudełka */
+  box-sizing: border-box;
+}
+
+/* na urządzeniach mobilnych zostawimy po prostu małe marginesy boczne */
+@media (max-width: 768px) {
+  .about-box {
+    margin: 1rem;      /* 1rem od góry/dół i od boków */
+    padding: 1.5rem;   /* mniej paddingu, żeby też wyglądało schludnie */
+  }
+}
+
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  .about-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.about-box h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+.about-box p {
+  margin-bottom: 0;
+}
+
+/* silniejsze przesunięcie contact-form w sekcji #kontakt */
+#kontakt .contact-form {
+  max-width: 350px;          /* jeszcze węższy formularz */
+  margin: 2rem 0.5rem 2rem auto; /* 2rem górą/dół, 0.5rem od prawej, auto od lewej */
+}
+
+/* na małych ekranach wycentruj i wypełnij całą szerokość */
+@media (max-width: 768px) {
+  #kontakt .contact-form {
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+
+/* złap h2 i wyrównaj go do prawej, w tej samej szerokości co formularz */
+#kontakt h2 {
+  max-width: 350px;            /* ta sama szerokość co #kontakt .contact-form */
+  margin: 2rem 0 1rem auto;    /* górny margines 2rem, dolny 1rem, automatyczny lewy */
+  text-align: left;
+}
+
+/* na małych ekranach znów wycentrujemy nagłówek */
+@media (max-width: 768px) {
+  #kontakt h2 {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .about-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--box-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+/* === KAFELKI NA SKOS === */
+.skewed-kafle {
+  display: flex;
+  justify-content: center; /* <– zamiast space-between */
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem auto; /* <– auto centrowanie */
+  padding: 0 2rem;
+  max-width: 1200px; /* <– limit szerokości */
+}
+
+.kafel-swap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  background-color: var(--box-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.kafel-tekst {
+  margin: 1rem 0;
+}
+
+.kafel-tekst h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.kafel-tekst p {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.kafel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+.cta-button {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: filter 0.3s ease;
+}
+
+.cta-button:hover {
+  filter: brightness(0.9);
+}
+
+/* MOBILE – kafle jeden pod drugim, układ zachowany */
+@media (max-width: 768px) {
+  .skewed-kafle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kafel-swap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-button:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+    filter: brightness(1.1);
+  }
+}
+
+.newsletter-btn {
+  background-color: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #00cfa7;
+  transform: scale(1.05);
+}
+
+@media (hover: none) {
+  .newsletter-btn:hover {
+    transform: none;
+  }
+}
+
+.newsletter-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+  #signup-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #signup-form input,
+  #signup-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #signup-form button {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-form {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} 
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 918px;
+  overflow: hidden;
+}
+
+.background-img {
+  position: absolute;
+  top: 0; left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  z-index: 1;
+}
+
+.overlay-center {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 65px);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: var(--text-color);
+  padding: 1rem 2rem;
+}
+
+.centered-logo {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.header-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* === UNIWERSALNY RESPONSYWNY HEADER + OVERLAY + KAFELKI === */
+
+/* --- HEADER OGÓLNY --- */
+.image-wrapper,
+header.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  max-height: 918px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  margin-bottom: 2rem;
+}
+
+.background-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.40), rgba(0,0,0,0.35));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- WYŚRODKOWANIE LOGO/OVERLAY --- */
+.overlay-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: var(--text-color, #e6edf3);
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.centered-logo {
+  max-width: 320px;
+  width: 80vw;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.header-subtitle {
+  font-size: 1.22rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* --- BOX CONTAINER (kafelki na stronie głównej) --- */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+.box {
+  min-height: 340px;
+  background-color: var(--box-bg, #161b22);
+  border-radius: 10px;
+  padding: 1.2rem;
+  border: 2px solid var(--border-color, #00ffcc);
+  transition: transform 0.3s, box-shadow 0.3s;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.35);
+}
+.box h3 {
+  margin-bottom: 0.7rem;
+  color: var(--accent-color, #00ffcc);
+}
+
+@media (max-width: 1024px) {
+  .box-container {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+}
+
+/* --- CONTAINER --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* --- MOBILKI: Dostosuj header, overlay i paddingi --- */
+@media (max-width: 768px) {
+  .image-wrapper,
+  header.image-wrapper {
+    min-height: 45vw;
+    height: 42vw;
+    max-height: 320px;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .background-img {
+    height: 100%;
+    min-height: 0;
+  }
+  .overlay-center {
+    left: 50% !important;
+    padding: 0.6rem 0.2rem;
+    width: 96vw;
+    max-width: 95vw;
+  }
+  .centered-logo {
+    max-width: 160px;
+    width: 50vw;
+  }
+  .header-subtitle {
+    font-size: 1.04rem;
+    padding: 0 1vw;
+  }
+  .container {
+    padding: 1.2rem 0.3rem;
+  }
+  .box-container {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1rem 0.1rem;
+  }
+  .box {
+    padding: 0.7rem;
+    min-height: 220px;
+  }
+  .box img {
+    height: 130px;
+  }
+}
+
+/* --- Drobne poprawki dostępności i wygody --- */
+@media (max-width: 480px) {
+  .centered-logo {
+    max-width: 110px;
+  }
+  .overlay-center {
+    font-size: 1rem;
+    padding: 0.5rem 0.05rem;
+  }
+  .box img {
+    height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-wrapper,
+  header.image-wrapper {
+    height: 44vw;
+    min-height: 160px;
+    max-height: 50vw;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  .background-img {
+    height: 100%;
+    min-height: 0;
+  }
+  .overlay-center {
+    left: 50% !important;
+    top: 56%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 2vw;
+    width: 92vw;
+    max-width: 98vw;
+    word-break: break-word;
+    font-size: 1.03rem;
+    line-height: 1.23;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.37);
+  }
+  .centered-logo {
+    max-width: 90px;
+    width: 40vw;
+    margin-bottom: 0.6rem;
+  }
+  .header-subtitle {
+    font-size: 0.98rem;
+    padding: 0 1vw;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.37);
+  }
+}
+@media (max-width: 400px) {
+  .header-subtitle {
+    font-size: 0.92rem;
+    padding: 0 0.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  header.etikk {
+    min-height: 160px;
+    height: 36vw;
+    max-height: 210px;
+    border-radius: 8px;
+    margin-bottom: 1.1rem;
+  }
+  header.etikk .background-img {
+    min-height: 140px;
+    object-fit: contain;  /* <-- kluczowa zmiana */
+    object-position: top center;
+  }
+  header.etikk .overlay-center {
+    font-size: 0.95rem;
+    padding: 0.75rem 2vw 0.7rem 2vw;
+    max-width: 97vw;
+  }
+}
+
+header.etikk {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+  height: 32vw;
+  max-height: 210px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #161b22;
+}
+header.etikk .background-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  z-index: 0;
+}
+header.etikk .gradient-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(10,20,26,0.13), rgba(0,0,0,0.33));
+  z-index: 1;
+}
+header.etikk .overlay-center {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  color: #00ffd4;
+  padding: 0.7rem 2vw 0.7rem 2vw;
+  background: none;
+  font-size: 1.22rem;
+  line-height: 1.23;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  border-radius: 9px;
+}
+header.etikk .overlay-center h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #00ffd4;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+header.etikk .overlay-center p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0.25rem 0 0 0;
+}
+
+@media (max-width: 600px) {
+  header.etikk {
+    min-height: 90px;
+    height: 33vw;
+    max-height: 160px;
+    border-radius: 8px;
+    margin-bottom: 1.1rem;
+  }
+  header.etikk .background-img {
+    min-height: 70px;
+  }
+  header.etikk .overlay-center {
+    font-size: 0.98rem;
+    padding: 0.2rem 2vw 0.3rem 2vw;
+  }
+  header.etikk .overlay-center h1 {
+    font-size: 1.13rem;
+  }
+  header.etikk .overlay-center p {
+    font-size: 0.9rem;
+  }
+}

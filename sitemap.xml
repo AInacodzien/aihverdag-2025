@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nettkart for nettstedet AIhverdag.no – generert manuelt for SEO -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://aihverdag.no/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-verktoy/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-verktoy/chatgpt-guide/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-verktoy/notion-ai-veiledning/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-hverdagen/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-hverdagen/planlegging-med-ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/ai-hverdagen/chatgpt-handleliste/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/arbeid/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/arbeid/ai-i-cv/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/arbeid/produktivitet-med-ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/barn-og-ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/barn-og-ai/ai-forteller-eventyr/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/barn-og-ai/sikre-apper-for-barn/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/etikk/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/etikk/ai-og-personvern/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/etikk/ai-og-falske-nyheter/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/guider/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/guider/kom-i-gang-med-ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/guider/blogg-med-ai/</loc>
+  </url>
+
+  <url>
+    <loc>https://aihverdag.no/kontakt/</loc>
+  </url>
+
+</urlset>
+
