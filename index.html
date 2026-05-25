@@ -30,7 +30,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 
 <link rel="preload" as="image" href="/images/kvinne-og-humanoid-robot.webp" fetchpriority="high" type="image/webp">
-<link rel="preload" as="image" href="/images/ai-robot-head.webp" fetchpriority="high">
   <!-- Web App Manifest -->
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#00ffc8">
@@ -63,6 +62,18 @@
     src: url("/fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
          url("/fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
   }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 </style>
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -92,10 +103,10 @@
 
 <body>
   <nav aria-label="Hovedmeny">
-  <button class="burger" aria-label="Mobilmeny">
-    <i class="fas fa-bars"></i>
+  <button class="burger" aria-label="Mobilmeny" aria-controls="hovedmeny-links" aria-expanded="false">
+    <i class="fas fa-bars" aria-hidden="true"></i>
   </button>
-  <div class="nav-links">
+  <div class="nav-links" id="hovedmeny-links">
     <ul>
       <li><a href="/">Hjem</a></li>
       <li><a href="/ai/">AI</a></li>
@@ -122,6 +133,7 @@
   <div class="gradient-overlay"></div>
 
   <div class="overlay-center">
+    <h1 class="visually-hidden">AI hverdag</h1>
     <img src="/images/aihverdag-logo.webp"
          alt="AIhverdag logo"
          width="350"
@@ -135,7 +147,7 @@
 </header>
 
 <!-- Ticker z dynamicznymi newsami -->
-  <div class="ticker">
+  <div class="ticker" aria-label="Siste AI-nyheter">
     <div class="ticker__wrap"></div>
   </div>
 
@@ -146,8 +158,8 @@
          alt="Kvinnelig humanoid robot i moderne stue – AI med menneskelige trekk"
          width="400"
          height="300"
+         loading="lazy"
          decoding="async"
-         fetchpriority="high"
          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" />
   </div>
 </div>
@@ -271,12 +283,12 @@ Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
 
       </nav>
       <div class="social-icons">
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
       </div>
       <div class="footer-bottom">
-        <img src="/images/aihverdag-logo.webp" alt="Logo" class="footer-logo" width="350" height="350">
+        <img src="/images/aihverdag-logo.webp" alt="AIhverdag logo" class="footer-logo" width="350" height="350">
         <p>&copy; 2025 Kunstig intelligens hverdag – Alle rettigheter reservert.</p>
       </div>
     </div>
@@ -286,8 +298,16 @@ Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.querySelector('.burger');
       const navLinks = document.querySelector('.nav-links');
-      burger && burger.addEventListener('click', () => navLinks.classList.toggle('active'));
-      document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+      if (burger && navLinks) {
+        burger.addEventListener('click', () => {
+          const isOpen = navLinks.classList.toggle('active');
+          burger.setAttribute('aria-expanded', String(isOpen));
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        }));
+      }
     });
   </script>
 <script>
@@ -295,13 +315,19 @@ Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
     .then(res => res.json())
     .then(data => {
       const wrap = document.querySelector('.ticker__wrap');
+      if (!wrap) return;
+
       wrap.innerHTML = data
-        .map(item =>
-          `<a href="${item.url}" target="_blank" rel="noopener">${item.title}</a>`
-        )
+        .map(item => {
+          const title = item.title || '';
+          if (!item.url || item.url === '#') {
+            return `<span>${title}</span>`;
+          }
+          return `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+        })
         .join('');
     })
-    .catch(err => console.error('Błąd ładowania newsów:', err));
+    .catch(err => console.error('Kunne ikke laste nyheter:', err));
 </script>
 </body>
 </html>
