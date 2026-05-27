@@ -9,73 +9,53 @@
   <title>AI hverdag – forståelig og nyttig blogg</title>
   <meta name="description" content="En blogg om hvordan du kan bruke kunstig intelligens i hverdagen – enkelt forklart, med praktiske eksempler og verktøy.">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="AI hverdag – forståelig og nyttig blogg">
   <meta property="og:description" content="Oppdag hvordan du kan bruke kunstig intelligens i det daglige. Enkelt forklart, steg for steg.">
   <meta property="og:image" content="https://aihverdag.no/images/aihverdag-logo.webp">
   <meta property="og:url" content="https://aihverdag.no/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI hverdag – forståelig og nyttig blogg">
   <meta name="twitter:description" content="Praktiske eksempler og verktøy for deg som vil forstå og bruke kunstig intelligens i hverdagen.">
   <meta name="twitter:image" content="https://aihverdag.no/images/aihverdag-logo.webp">
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 
-<link rel="preload" as="image" href="/images/kvinne-og-humanoid-robot.webp" fetchpriority="high" type="image/webp">
-  <!-- Web App Manifest -->
+  <link rel="preload" as="image" href="/images/kvinne-og-humanoid-robot.webp" fetchpriority="high" type="image/webp">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#00ffc8">
 
-<link rel="preload" href="/fonts/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-  <!-- Fonts (krytyczne ikony) -->
+  <link rel="preload" href="/fonts/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
-
-  <!-- Lazy loaded main stylesheet -->
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
-<style>
-  @font-face {
-    font-family: "Font Awesome 6 Brands";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
-         url("/fonts/fontawesome/webfonts/fa-brands-400.ttf") format("truetype");
-  }
+  <style>
+    @font-face {
+      font-family: "Font Awesome 6 Brands";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"),
+           url("/fonts/fontawesome/webfonts/fa-brands-400.ttf") format("truetype");
+    }
 
-  @font-face {
-    font-family: "Font Awesome 6 Free";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("/fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
-         url("/fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
-  }
+    @font-face {
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url("/fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
+           url("/fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
+    }
+  </style>
 
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-</style>
-  <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -103,69 +83,70 @@
 
 <body>
   <nav aria-label="Hovedmeny">
-  <button class="burger" aria-label="Mobilmeny" aria-controls="hovedmeny-links" aria-expanded="false">
-    <i class="fas fa-bars" aria-hidden="true"></i>
-  </button>
-  <div class="nav-links" id="hovedmeny-links">
-    <ul>
-      <li><a href="/">Hjem</a></li>
-      <li><a href="/ai/">AI</a></li>
-      <li><a href="/#eksempler">Eksempler</a></li>
-      <li><a href="/kontakt/">Kontakt</a></li>
-    </ul>
-  </div>
-</nav>
-  
- <header id="hjem" class="home-header image-wrapper">
-  <img
-  src="/images/kvinne-og-humanoid-robot.webp"
-  srcset="/images/kvinne-og-humanoid-robot-768.webp 768w,
-          /images/kvinne-og-humanoid-robot.webp 1920w"
-  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1920px"
-  width="1920"
-  height="918"
-  alt="Kvinne og humanoid robot – AI og teknologi i hverdagen"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  class="background-img"
-/>
-  <div class="gradient-overlay"></div>
+    <button class="burger" aria-label="Mobilmeny" aria-controls="hovedmeny-links" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="nav-links" id="hovedmeny-links">
+      <ul>
+        <li><a href="/">Hjem</a></li>
+        <li><a href="/ai/">AI</a></li>
+        <li><a href="/#eksempler">Eksempler</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <div class="overlay-center">
-    <h1 class="visually-hidden">AI hverdag</h1>
-    <img src="/images/aihverdag-logo.webp"
-         alt="AIhverdag logo"
-         width="350"
-         height="350"
-         loading="eager"
-         decoding="async"
-         class="centered-logo" />
+  <header id="hjem" class="home-header image-wrapper">
+    <img
+      src="/images/kvinne-og-humanoid-robot.webp"
+      srcset="/images/kvinne-og-humanoid-robot-768.webp 768w,
+              /images/kvinne-og-humanoid-robot.webp 1920w"
+      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1920px"
+      width="1920"
+      height="918"
+      alt="Kvinne og humanoid robot – AI og teknologi i hverdagen"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="background-img"
+    >
+    <div class="gradient-overlay"></div>
 
-    <p class="header-subtitle">Utforsk potensialet til kunstig intelligens i hverdagen – praktiske tips, trender og eksempler.</p>
-  </div>
-</header>
+    <div class="overlay-center">
+      <h1 class="visually-hidden">AI hverdag</h1>
+      <img
+        src="/images/aihverdag-logo.webp"
+        alt="AIhverdag logo"
+        width="350"
+        height="350"
+        loading="eager"
+        decoding="async"
+        class="centered-logo"
+      >
+      <p class="header-subtitle">Utforsk potensialet til kunstig intelligens i hverdagen – praktiske tips, trender og eksempler.</p>
+    </div>
+  </header>
 
-<!-- Ticker z dynamicznymi newsami -->
   <div class="ticker" aria-label="Siste AI-nyheter">
     <div class="ticker__wrap"></div>
   </div>
 
- <section id="blog" class="container section-alt" style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <div style="flex: 1 1 300px; max-width: 400px;">
-  <div style="position: relative; width: 100%; padding-top: 75%;">
-    <img src="/images/ai-robot-head.webp"
-         alt="Kvinnelig humanoid robot i moderne stue – AI med menneskelige trekk"
-         width="400"
-         height="300"
-         loading="lazy"
-         decoding="async"
-         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" />
-  </div>
-</div>
+  <section id="blog" class="container intro-section">
+    <div class="intro-media">
+      <div class="ratio-box">
+        <img
+          src="/images/ai-robot-head.webp"
+          alt="Kvinnelig humanoid robot i moderne stue – AI med menneskelige trekk"
+          width="400"
+          height="300"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+    </div>
 
-    <div style="flex: 1 1 300px; max-width: 500px;">
-      <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Velkommen til AI-bloggen</h2>
+    <div class="intro-copy">
+      <h2>Velkommen til AI-bloggen</h2>
       <p>Her finner du inspirasjon, verktøy og guider for hvordan du kan bruke kunstig intelligens i hverdagen. Enten du er nybegynner eller erfaren, har vi noe for deg.</p>
     </div>
   </section>
@@ -173,114 +154,116 @@
   <main id="eksempler" class="container">
     <h2>Praktiske eksempler på bruk av AI</h2>
     <div class="box-container">
-      <a href="/eksempler/Ai-hverdag/">
-  <article class="box">
-    <img src="/images/ai-hjemmet.webp" 
-         alt="Eldre kvinne bruker AI-assistent hjemme – teknologi som gjør hverdagen enklere og tryggere" 
-         width="1024" 
-         height="1024" 
-         loading="lazy" 
-         decoding="async">
-    <h3>AI-hverdag</h3>
-    <p>Se hvordan kunstig intelligens kan gjøre hverdagen din mer komfortabel, effektiv og trygg – fra smarte assistenter til energistyring.</p>
-  </article>
-</a>
+      <a href="/ai/">
+        <article class="box">
+          <img
+            src="/images/ai-hjemmet.webp"
+            alt="Eldre kvinne bruker AI-assistent hjemme – teknologi som gjør hverdagen enklere og tryggere"
+            width="1024"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>AI-hverdag</h3>
+          <p>Se hvordan kunstig intelligens kan gjøre hverdagen din mer komfortabel, effektiv og trygg – fra smarte assistenter til energistyring.</p>
+        </article>
+      </a>
 
       <a href="/ai-verktoy/">
-  <article class="box">
-    <img src="/images/ai-verktoy.webp" 
-         alt="Person bruker AI-verktøy på bærbar PC – effektiv digital assistent i arbeidshverdagen" 
-         width="1024" 
-         height="1024" 
-         loading="lazy" 
-         decoding="async">
-    <h3>AI-verktøy</h3>
-    <p>Utforsk gratis og betalte AI-verktøy som hjelper deg med tekst, bilder, video og produktivitet.</p>
-  </article>
-</a>
+        <article class="box">
+          <img
+            src="/images/ai-verktoy.webp"
+            alt="Person bruker AI-verktøy på bærbar PC – effektiv digital assistent i arbeidshverdagen"
+            width="1024"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>AI-verktøy</h3>
+          <p>Utforsk gratis og betalte AI-verktøy som hjelper deg med tekst, bilder, video og produktivitet.</p>
+        </article>
+      </a>
+
       <a href="/guider/">
-  <article class="box">
-    <img src="/images/ai-tips.webp" 
-         alt="Kvinne lærer AI-tips på laptop – effektiv bruk av kunstig intelligens i hverdagen" 
-         width="1024" 
-         height="1024" 
-         loading="lazy" 
-         decoding="async">
-    <h3>Guider</h3>
-    <p>Lær smarte triks som gjør det lettere å bruke AI – uansett om du er nybegynner eller mer erfaren.</p>
-  </article>
-</a>
+        <article class="box">
+          <img
+            src="/images/ai-tips.webp"
+            alt="Kvinne lærer AI-tips på laptop – effektiv bruk av kunstig intelligens i hverdagen"
+            width="1024"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>Guider</h3>
+          <p>Lær smarte triks som gjør det lettere å bruke AI – uansett om du er nybegynner eller mer erfaren.</p>
+        </article>
+      </a>
 
       <a href="/etikk/">
-  <article class="box">
-    <img src="/images/ai-eldre.webp" 
-         alt="Bestefar og barnebarn bruker nettbrett sammen – generasjonsmøte med AI-teknologi" 
-         width="1024" 
-         height="1024" 
-         loading="lazy" 
-         decoding="async">
-    <h3>Etikk</h3>
-    <p>Oppdag hvordan AI kan hjelpe eldre med påminnelser, samtaler og trygghet i hverdagen.</p>
-  </article>
-</a>
+        <article class="box">
+          <img
+            src="/images/ai-eldre.webp"
+            alt="Bestefar og barnebarn bruker nettbrett sammen – generasjonsmøte med AI-teknologi"
+            width="1024"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>Etikk</h3>
+          <p>Utforsk personvern, kildekritikk og ansvarlig bruk av AI – slik at teknologien blir både nyttig og trygg.</p>
+        </article>
+      </a>
     </div>
   </main>
 
-  <!-- About section -->
   <section class="about-box container">
     <h2>Hvem er vi?</h2>
-    <p>Vi er to helt forskjellige hoder, men vi jobber som et team:
-Kristoff – IT-ekspert med et stort hjerte for AI, og Jan - AI-spesialist som alltid har et svar (og noen ganger et glimt i øyet).
-Vi deler en lidenskap for å utforske, forstå og forenkle kunstig intelligens i hverdagen.
-På AIhverdag.no finner du guider, sammenligninger og alt mulig rart som kan hjelpe deg å bruke AI på en smartere og enklere måte.
-Ingen unødvendig hype – vi sier det som det er!
-
-Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
+    <p>Vi er to helt forskjellige hoder, men vi jobber som et team: Kristoff – IT-ekspert med et stort hjerte for AI, og Jan – AI-spesialist som alltid har et svar. Vi deler en lidenskap for å utforske, forstå og forenkle kunstig intelligens i hverdagen. På AIhverdag.no finner du guider, sammenligninger og praktiske tips som kan hjelpe deg å bruke AI på en smartere og enklere måte.</p>
   </section>
 
-  <!-- Newsletter section -->
   <section class="container skewed-kafle">
-  <!-- Kafel 1 – newsletter (grafika u góry) -->
-  <div class="kafel-swap">
-    <img src="/images/newsletter.webp" 
-     alt="Hånd på tastatur med digitale ikoner – meld deg på nyhetsbrev om kunstig intelligens" 
-     width="1536" 
-     height="1024" 
-     loading="lazy" 
-     decoding="async" 
-     class="kafel-img">
-    <div class="kafel-tekst">
-      <h2>Abonner på vårt nyhetsbrev</h2>
-      <p>Få gratis e-bøker, AI-prompter og smarte tips rett i innboksen din – hver uke.</p>
-      <a href="/nyhetsbrev/index.html" class="cta-button">Meld meg på</a>
+    <div class="kafel-swap">
+      <img
+        src="/images/newsletter.webp"
+        alt="Hånd på tastatur med digitale ikoner – meld deg på nyhetsbrev om kunstig intelligens"
+        width="1536"
+        height="1024"
+        loading="lazy"
+        decoding="async"
+        class="kafel-img"
+      >
+      <div class="kafel-tekst">
+        <h2>Abonner på vårt nyhetsbrev</h2>
+        <p>Få gratis e-bøker, AI-prompter og smarte tips rett i innboksen din – hver uke.</p>
+        <a href="/nyhetsbrev/index.html" class="cta-button">Meld meg på</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Kafel 2 – kontakt (grafika na dole) -->
-  <div class="kafel-swap">
-    <div class="kafel-tekst">
-      <h2>Kontakt oss</h2>
-      <p>Har du spørsmål, forslag eller ønsker du å samarbeide med oss? Ta kontakt!</p>
-      <a href="/kontakt/index.html" class="cta-button">Kontakt oss</a>
+    <div class="kafel-swap">
+      <div class="kafel-tekst">
+        <h2>Kontakt oss</h2>
+        <p>Har du spørsmål, forslag eller ønsker du å samarbeide med oss? Ta kontakt!</p>
+        <a href="/kontakt/index.html" class="cta-button">Kontakt oss</a>
+      </div>
+      <img
+        src="/images/kontakt.webp"
+        alt="Neon-symbol for AI og kommunikasjon – kontakt med kunstig intelligens"
+        width="1024"
+        height="768"
+        loading="lazy"
+        decoding="async"
+        class="kafel-img"
+      >
     </div>
-    <img src="/images/kontakt.webp" 
-     alt="Neon-symbol for AI og kommunikasjon – kontakt med kunstig intelligens" 
-     width="1024" 
-     height="768" 
-     loading="lazy" 
-     decoding="async" 
-     class="kafel-img">
-  </div>
-</section>
+  </section>
 
   <footer>
     <div class="footer-inner">
-      <nav>
+      <nav aria-label="Bunnmeny">
         <a href="/">Hjem</a>
-<a href="/ai/">AI</a>
-<a href="/#eksempler">Eksempler</a>
-<a href="/kontakt/">Kontakt</a>
-
+        <a href="/ai/">AI</a>
+        <a href="/#eksempler">Eksempler</a>
+        <a href="/kontakt/">Kontakt</a>
       </nav>
       <div class="social-icons">
         <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -293,7 +276,7 @@ Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
       </div>
     </div>
   </footer>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.querySelector('.burger');
@@ -310,24 +293,24 @@ Har du spørsmål eller bare vil slå av en prat? Vi er alltid klare!</p>
       }
     });
   </script>
-<script>
-  fetch('/news.json')
-    .then(res => res.json())
-    .then(data => {
-      const wrap = document.querySelector('.ticker__wrap');
-      if (!wrap) return;
+  <script>
+    fetch('/news.json')
+      .then(res => res.json())
+      .then(data => {
+        const wrap = document.querySelector('.ticker__wrap');
+        if (!wrap) return;
 
-      wrap.innerHTML = data
-        .map(item => {
-          const title = item.title || '';
-          if (!item.url || item.url === '#') {
-            return `<span>${title}</span>`;
-          }
-          return `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
-        })
-        .join('');
-    })
-    .catch(err => console.error('Kunne ikke laste nyheter:', err));
-</script>
+        wrap.innerHTML = data
+          .map(item => {
+            const title = item.title || '';
+            if (!item.url || item.url === '#') {
+              return `<span>${title}</span>`;
+            }
+            return `<a href="${item.url}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+          })
+          .join('');
+      })
+      .catch(err => console.error('Kunne ikke laste nyheter:', err));
+  </script>
 </body>
 </html>
