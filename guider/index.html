@@ -3,48 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aihverdag.no/guider/">
 
-  <title>AI hverdag – forståelig og nyttig blogg</title>
-  <meta name="description" content="En blogg om hvordan du kan b...hverdag – enkelt forklart, med praktiske eksempler og verktøy.">
+  <title>Guider – lær å bruke AI steg for steg | AI hverdag</title>
+  <meta name="description" content="Enkle AI-guider for nybegynnere og nysgjerrige. Lær promptskriving, kreativ bruk av AI og smarte hverdagsgrep.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="AI hverdag – forståelig og nyttig blogg">
-  <meta property="og:description" content="Oppdag hvordan du kan...tig intelligens i det daglige. Enkelt forklart, steg for steg.">
-  <meta property="og:image" content="https://aihverdag.no/assets/aihverdag-logo.webp">
-  <meta property="og:url" content="https://aihverdag.no">
+  <meta property="og:title" content="Guider – lær å bruke AI steg for steg">
+  <meta property="og:description" content="Praktiske guider som hjelper deg å mestre kunstig intelligens i hverdagen.">
+  <meta property="og:image" content="https://aihverdag.no/images/aihverdag-logo.webp">
+  <meta property="og:url" content="https://aihverdag.no/guider/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AI hverdag – forståelig og nyttig blogg">
-  <meta name="twitter:description" content="Praktiske eksempler ...y for deg som vil forstå og bruke kunstig intelligens hverdag.">
-  <meta name="twitter:image" content="https://aihverdag.no/assets/aihverdag-logo.webp">
+  <meta name="twitter:title" content="Guider – lær å bruke AI steg for steg">
+  <meta name="twitter:description" content="Smarte tips og guider for deg som vil bli tryggere på kunstig intelligens.">
+  <meta name="twitter:image" content="https://aihverdag.no/images/aihverdag-logo.webp">
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
-
-  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
-
-  <!-- Web App Manifest -->
   <link rel="manifest" href="/manifest.json">
-
-  <!-- Theme for mobile browser (Android, Windows) -->
   <meta name="theme-color" content="#00ffc8">
 
-  <!-- Fonts + Styles -->
-  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <nav aria-label="Hovedmeny">
-    <button class="burger" aria-label="Mobilmeny">
-      <i class="fas fa-bars"></i>
+    <button class="burger" aria-label="Mobilmeny" aria-controls="hovedmeny-links" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
-    <div class="nav-links">
+    <div class="nav-links" id="hovedmeny-links">
       <ul>
         <li><a href="/">Hjem</a></li>
         <li><a href="/ai/">AI</a></li>
@@ -55,63 +47,62 @@
   </nav>
 
   <header class="guider-header image-wrapper">
-  <img
-    src="/images/ai-tips.webp"
-    alt="Guider – smarte råd og inspirasjon om kunstig intelligens"
-    width="1920"
-    height="918"
-    loading="eager"
-    decoding="async"
-    class="background-img"
-  />
-  <div class="gradient-overlay"></div>
-
-  <div class="overlay-center">
-    <h1>Guider</h1>
-    <p>„Utforsk smarte tips og guider som hjelper deg å mestre kunstig intelligens – steg for steg!”</p>
-  </div>
-</header>
+    <img
+      src="/images/ai-tips.webp"
+      alt="Guider – smarte råd og inspirasjon om kunstig intelligens"
+      width="1920"
+      height="918"
+      loading="eager"
+      decoding="async"
+      class="background-img"
+    >
+    <div class="gradient-overlay"></div>
+    <div class="overlay-center">
+      <h1>Guider</h1>
+      <p class="hero-lead">Utforsk smarte tips og guider som hjelper deg å mestre kunstig intelligens – steg for steg.</p>
+    </div>
+  </header>
 
   <main class="container">
     <section class="category-section">
       <h2>For nybegynnere</h2>
       <div class="tips-container">
-        <div class="tip-card">
-          <i class="fas fa-lightbulb"></i>
-          <h3>Ai-starten</h3>
-          <p>For deg som er helt ny - enkle forklaringer, ingen teknospråk</p>
-        </div>
-        <div class="tip-card">
-          <i class="fas fa-paint-brush"></i>
-          <h3> Kreativmaskinen</h3>
-          <p>Skap bilder, musikk, tekster og mer med AI</p>
-        </div>
-        <div class="tip-card">
-          <i class="fas fa-cogs"></i>
+        <article class="tip-card">
+          <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          <h3>AI-starten</h3>
+          <p>For deg som er helt ny: enkle forklaringer uten unødvendig teknospråk.</p>
+        </article>
+        <article class="tip-card">
+          <i class="fas fa-paint-brush" aria-hidden="true"></i>
+          <h3>Kreativmaskinen</h3>
+          <p>Skap bilder, musikk, tekster og ideer med AI som kreativ sparringspartner.</p>
+        </article>
+        <article class="tip-card">
+          <i class="fas fa-cogs" aria-hidden="true"></i>
           <h3>Snikksmart</h3>
-          <p>Smarte triks og hverdags-hacks med kunstig intelligens</p>
-        </div>
+          <p>Smarte triks og hverdagsgrep som gjør kunstig intelligens enklere å bruke.</p>
+        </article>
       </div>
     </section>
 
     <section class="category-section">
       <h2>Skriving og kreativ bruk av AI</h2>
       <div class="tips-container">
-        <div class="tip-card">
-          <i class="fas fa-pen-nib"></i>
+        <article class="tip-card">
+          <i class="fas fa-pen-nib" aria-hidden="true"></i>
           <h3>Skrivemaskinen</h3>
-          <p>Lær å skrive med AI: blogg, CV, e-bok, nyhetsbrev</p>
-        </div>
-        <div class="tip-card">
-          <i class="fas fa-graduation-cap"></i>
+          <p>Lær å skrive med AI: blogg, CV, e-bok, nyhetsbrev og tydeligere tekster.</p>
+        </article>
+        <article class="tip-card">
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
           <h3>Promptskolen</h3>
-          <p>Bli god på promptskriving - teknikker, tips og eksempler</p>
-        </div>
-        <div class="tip-card">
-          <i class="fas fa-gamepad"></i>
+          <p>Bli bedre på promptskriving med teknikker, tips og konkrete eksempler.</p>
+        </article>
+        <article class="tip-card">
+          <i class="fas fa-gamepad" aria-hidden="true"></i>
           <h3>Lek med AI</h3>
-          <p>Eksperimenter, lek, rare ideer og morsomme prosjekter med AI</p>
-        </div>
+          <p>Eksperimenter, test rare ideer og bygg morsomme småprosjekter med AI.</p>
+        </article>
       </div>
     </section>
 
@@ -122,27 +113,26 @@
     <h2>Vil du lære mer?</h2>
     <p>Abonner på vårt nyhetsbrev for å få ukentlige AI-tips direkte i innboksen din.</p>
     <form class="newsletter-form" netlify>
-      <input type="email" placeholder="Din e-post" required>
+      <input type="email" name="email" placeholder="Din e-post" autocomplete="email" required>
       <button type="submit" class="cta-button">Abonner</button>
     </form>
   </section>
 
   <footer>
     <div class="footer-inner">
-      <nav>
+      <nav aria-label="Bunnmeny">
         <a href="/">Hjem</a>
-<a href="/ai/">AI</a>
-<a href="/#eksempler">Eksempler</a>
-<a href="/kontakt/">Kontakt</a>
-
+        <a href="/ai/">AI</a>
+        <a href="/#eksempler">Eksempler</a>
+        <a href="/kontakt/">Kontakt</a>
       </nav>
       <div class="social-icons">
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
       </div>
       <div class="footer-bottom">
-        <img src="/images/aihverdag-logo.webp" alt="Logo" class="footer-logo" width="350" height="350">
+        <img src="/images/aihverdag-logo.webp" alt="AIhverdag logo" class="footer-logo" width="350" height="350">
         <p>&copy; 2025 Kunstig intelligens hverdag – Alle rettigheter reservert.</p>
       </div>
     </div>
@@ -152,19 +142,17 @@
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.querySelector('.burger');
       const navLinks = document.querySelector('.nav-links');
-      const links = document.querySelectorAll('.nav-links a');
       if (burger && navLinks) {
         burger.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
+          const isOpen = navLinks.classList.toggle('active');
+          burger.setAttribute('aria-expanded', String(isOpen));
         });
-        links.forEach(link => link.addEventListener('click', () => {
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
           navLinks.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
         }));
       }
     });
   </script>
 </body>
 </html>
-
-
-
