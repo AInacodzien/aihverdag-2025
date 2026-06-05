@@ -622,6 +622,11 @@ footer nav a {
   opacity: 0.8;
 }
 
+.social-icons .fa-twitter::before {
+  content: "\e61f" !important;
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
 .footer-logo {
   display: block;
   max-width: 80px;
