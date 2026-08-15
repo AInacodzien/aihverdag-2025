@@ -6,86 +6,46 @@
   <title>Nyhetsbrev - AI hverdag</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-  .cta-button {
-    background-color: #00ffe0;
-    color: black;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-top: 12px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.95rem;
-    max-width: 300px;
-    width: 100%;
-  }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
 
-  .cta-button:hover {
-    background-color: #00ccb3;
-  }
+    .cta-button {
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      padding: 8px 16px;
+      margin-top: 12px;
+      background-color: #00ffe0;
+      border: none;
+      border-radius: 6px;
+      color: black;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+    }
 
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #signup-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-</style>
+    .status-message {
+      max-width: 520px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      border: 1px solid #00ffe0;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <main>
     <section class="newsletter-form">
-      <h2>Abonner på vårt nyhetsbrev</h2>
-      <p>Få gratis e-bøker, AI-prompter og smarte tips rett i innboksen din - hver uke.</p>
-
-      <form id="signup-form">
-        <input type="email" id="email" placeholder="Din e-post" required>
-        <input type="text" name="honeypot" id="honeypot" style="display: none;" autocomplete="off">
-        <button type="submit" class="cta-button">Meld meg på</button>
-      </form>
-
-      <div id="msg"></div>
-
-      <a href="../" class="cta-button back-to-top">Tilbake til forsiden</a>
+      <h1>Nyhetsbrev</h1>
+      <p class="status-message">Påmeldingen er midlertidig utilgjengelig mens vi oppdaterer løsningen.</p>
+      <a href="../" class="cta-button">Tilbake til forsiden</a>
     </section>
   </main>
-
-  <script>
-    document.getElementById('signup-form').addEventListener('submit', async e => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const honeypot = document.getElementById('honeypot').value;
-      if (honeypot) {
-        console.log('Bot detected, aborting...');
-        return;
-      }
-      document.getElementById('msg').textContent = 'Sender...';
-      try {
-        const res = await fetch('subscribe.php', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
-        });
-        if (res.ok) {
-          window.location.href = '../nyhetsbrev-takk/';
-        } else {
-          throw new Error(await res.text());
-        }
-      } catch (err) {
-        document.getElementById('msg').textContent = 'Noe gikk galt.';
-        console.error(err);
-      }
-    });
-  </script>
 </body>
 </html>
