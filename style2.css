@@ -191,22 +191,7 @@ nav {
 
 
 
-/* === NEWSLETTER + FORM SECTIONS === */
-/* Newsletter Section oraz drobne modyfikacje stopki */
-.newsletter-section {
-  background-color: var(--section-bg);
-  padding: 3rem 2rem;
-  text-align: center;
-  margin: 3rem 0;
-}
-.newsletter-form {
-  max-width: 500px;
-  margin: 2rem auto;
-}
-
-/* Dodane style formularzy – newsletter i kontakt */
-.contact-form,
-.newsletter-form {
+.contact-form {
   max-width: 500px;
   margin: 2rem auto;
 }
@@ -232,12 +217,6 @@ textarea {
 }
 .cta-button:hover {
   filter: brightness(0.9);
-}
-
-/* Styl pola e-mail w newsletterze */
-.newsletter-email {
-  width: 300px;
-  max-width: 100%;
 }
 
 /* Przywrócenie stylu linków w listach artykułów */
@@ -796,55 +775,14 @@ footer nav a {
   }
 }
 
-.newsletter-btn {
-  background-color: #00ffc3;
-  color: #000;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.newsletter-btn:hover {
-  background-color: #00cfa7;
-  transform: scale(1.05);
-}
-
 @media (hover: none) {
-  .newsletter-btn:hover {
-    transform: none;
   }
-}
-
-.newsletter-btn:active {
-  transform: scale(0.95);
-}
 
 @media (max-width: 480px) {
-  #signup-form {
-    width: 90%;
-    margin: 0 auto;
   }
-
-  #signup-form input,
-  #signup-form button {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #signup-form button {
-    margin-top: 1rem;
-  }
-}
 
 @media (max-width: 480px) {
-  .newsletter-form {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
-}
 
 img {
   max-width: 100%;
