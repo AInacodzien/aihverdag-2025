@@ -191,6 +191,13 @@ nav {
 
 
 
+.newsletter-section {
+  background-color: var(--section-bg);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
 .contact-form {
   max-width: 500px;
   margin: 2rem auto;
@@ -774,15 +781,6 @@ footer nav a {
     filter: brightness(1.1);
   }
 }
-
-@media (hover: none) {
-  }
-
-@media (max-width: 480px) {
-  }
-
-@media (max-width: 480px) {
-  }
 
 img {
   max-width: 100%;
